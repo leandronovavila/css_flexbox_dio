@@ -1,0 +1,149 @@
+/* resetar quaisquer configurações*/
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    font-family: sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(243, 243,243);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+   
+}
+.full-wrap {
+    display: flex; /* */
+    align-items: center; /* no eixo y irá ficar no centro*/
+    justify-content:start; /*start = começar da esqueda para a direita. // center =  no eixo x vai ficar no centro*/
+    width: 55%; /* 55 por cento do body*/
+    height: 93vh;
+}
+.ph {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 50%;
+}
+.ph img {
+    height: 50rem;
+}
+.login {
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    flex-direction: column; /*muda o eixo para coluna*/
+    width: 50%; /*mesmo do outro container*/
+    min-height: 34rem;
+    
+}
+.group {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    padding: 1.3rem 0;
+    border: 1px solid lightgray;
+    margin-bottom: 10px;
+   
+}
+.group:nth-child(1){ /*seletor que pega os filhos dos elementos na sequencia */
+    min-width: 19rem;  
+
+}
+.insta-logo {
+    height: 3rem;
+}
+.profile-photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /*50% arredonda a imagem*/
+    overflow: hidden; /*imagem não extravasar o tamanho da div*/
+}
+.profile-photo img {
+    height: 6rem;
+   
+}
+.ilogin{
+    background-color: #0095f6;
+    padding: 8px;
+    color: white;
+    border-radius: 4px;
+    margin-top: 20px;  
+}
+.ilogout {
+    margin-top: 1rem;
+    color: #0095f6;  
+   /* width: 100%; altero o tamanha da segunda div*/
+}
+.not-account {
+    color: rgb(160,160,160);
+    margin-top: 10px;   
+}
+.blue-link {
+    color: #0095f6;
+}
+.link-get {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.3rem 0;    
+}
+.get-app{
+    color: black;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.download{
+    display: flex;
+    width: 100%;
+    justify-content:space-evenly;
+    align-items: center;
+    padding: 1rem;
+}
+.app-down{
+    height: 3rem;
+    width: 10rem;
+    background-size: cover;
+   
+}
+.app-down:nth-child(1){
+    background-image: url('apple_btn.png');
+}
+.app-down:nth-child(2){
+    background-image: url('googleplay_btn.png');
+}
+/* media queries - mobile and tablet*/
+@media (max-width: 1024px){
+    .full-wrap {
+        width: 95%;
+    }
+}
+@media (max-width: 650px){
+    body{
+        background-color: white;
+    }
+    .full-wrap{
+        width: auto;
+    }
+    .ph{
+        display: none;
+    }
+    .login{
+        width: 100%;
+    }
+    .group{
+        border: 1px solid transparent;
+    }
+}
